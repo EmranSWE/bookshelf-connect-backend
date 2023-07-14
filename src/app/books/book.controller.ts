@@ -3,6 +3,9 @@ import httpStatus from 'http-status';
 import catchAsync from '../../shared/catchAsync';
 import sendResponse from '../../shared/sendResponse';
 import { BookService } from './book.service';
+import pick from '../../shared/pick';
+import { bookFilterableFields } from './book.interface';
+import { paginationFields } from '../constant/pagination';
 
 const createBook: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
@@ -19,7 +22,11 @@ const createBook: RequestHandler = catchAsync(
 
 const getAllBooks: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
-    const result = await BookService.getAllBooks();
+    const filters = pick(req.query, bookFilterableFields);
+    const paginationOptions = pick(req.query, paginationFields);
+    console.log('Filters', filters);
+    console.log('Pagination', paginationOptions);
+    const result = await BookService.getAllBooks(paginationOptions, filters);
     sendResponse(res, {
       statusCode: httpStatus.OK,
       success: true,
@@ -31,7 +38,6 @@ const getAllBooks: RequestHandler = catchAsync(
 const getSingleBook: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const id = req.params.id;
-    console.log(id);
     const result = await BookService.getSingleBook(id);
     sendResponse(res, {
       statusCode: httpStatus.OK,

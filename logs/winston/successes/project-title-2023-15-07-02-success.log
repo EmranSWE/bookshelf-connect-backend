@@ -173,3 +173,33 @@
   level: 'info',
   timestamp: '2023-07-14T20:31:47.668Z'
 }
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-14T20:31:55.483Z'
+}
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-14T20:50:24.450Z'
+}
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-14T20:51:32.934Z'
+}
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-14T20:52:00.585Z'
+}
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-14T20:52:10.948Z'
+}
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-14T20:55:20.022Z'
+}
