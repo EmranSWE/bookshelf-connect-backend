@@ -1,0 +1,40 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\successes\\.b867dffe4cea7b5e682f00a2a356a4920fcde9ff-audit.json",
+  "files": [
+    {
+      "date": 1687274599532,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\successes\\project-title-2023-20-06-21-success.log",
+      "hash": "15f34023f36f7d97690bfdab4fb6577695861c18db040134ae55729f49846ec8"
+    },
+    {
+      "date": 1687276943226,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\successes\\project-title-2023-20-06-22-success.log",
+      "hash": "525b4ee8e406f07c53117aa6ea242743d91f0c82491f79b333ea4296f266e77d"
+    },
+    {
+      "date": 1687282602839,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\successes\\project-title-2023-20-06-23-success.log",
+      "hash": "a04fdbbad6b252785e6c2024c9b2cd6f1b523b0c939d6e16282bca613da51c5b"
+    },
+    {
+      "date": 1687284929391,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\successes\\project-title-2023-21-06-00-success.log",
+      "hash": "0ac5513a39c81aba782bed71c8f75a7aa19bb4a56dc6b304c7f9df0b4a60dc39"
+    },
+    {
+      "date": 1687287785360,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\successes\\project-title-2023-21-06-01-success.log",
+      "hash": "cda2f78e6243bbe2bbc81885889c759a1ddafd66d1bb2dad796b104e87995609"
+    },
+    {
+      "date": 1687291259078,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\successes\\project-title-2023-21-06-02-success.log",
+      "hash": "6d23a228100c84d231e69315b122791074a5e8d58ec1bf80e64c1ed45dcfc71d"
+    }
+  ],
+  "hashType": "sha256"
+}

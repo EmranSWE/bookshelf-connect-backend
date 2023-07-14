@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "G:\\Next Level Web development\\Redux repare\\Bookshelf Connect\\bookshelf-connect-backend\\logs\\winston\\successes\\.5ebaeb7d8fba36b43401b7d5f244e510ef022945-audit.json",
+    "files": [
+        {
+            "date": 1689363918366,
+            "name": "G:\\Next Level Web development\\Redux repare\\Bookshelf Connect\\bookshelf-connect-backend\\logs\\winston\\successes\\project-title-2023-15-07-01-success.log",
+            "hash": "846c3e6baa3dd2bcc468c103047420d156b42367acd9a202fcd564c3b16fffe7"
+        }
+    ],
+    "hashType": "sha256"
+}

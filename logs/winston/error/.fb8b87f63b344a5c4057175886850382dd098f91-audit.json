@@ -1,0 +1,40 @@
+{
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\error\\.fb8b87f63b344a5c4057175886850382dd098f91-audit.json",
+  "files": [
+    {
+      "date": 1687274599536,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\error\\project-title-2023-20-06-21-error.log",
+      "hash": "0a996434160e555e240e0790b36271574bb631e72e8b747ce404d74add2ecf74"
+    },
+    {
+      "date": 1687276943231,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\error\\project-title-2023-20-06-22-error.log",
+      "hash": "fd86bfe558f246b708e9029a5ead9bca50646cf28872f6d9b1db3b7f47896894"
+    },
+    {
+      "date": 1687282602843,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\error\\project-title-2023-20-06-23-error.log",
+      "hash": "b3680d60729a43a8669633e7b54989101330a13e51764c02483fd7565e59956d"
+    },
+    {
+      "date": 1687284929395,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\error\\project-title-2023-21-06-00-error.log",
+      "hash": "0e69ae1c828c866328e43a060e88b4ef4bf6d6d3eb73eabb7ba06d4edb380b59"
+    },
+    {
+      "date": 1687287785364,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\error\\project-title-2023-21-06-01-error.log",
+      "hash": "e6df1fa5eb40195b6bc651e8f33d6f855a02c64749c69a231242f530748c6bf3"
+    },
+    {
+      "date": 1687291259082,
+      "name": "G:\\Next Level Web development\\Boilerplate code\\logs\\winston\\error\\project-title-2023-21-06-02-error.log",
+      "hash": "76a04a194dfcf350b0ffc1152f8ac0c8ed14e92cef4e2196012556733fbd48a2"
+    }
+  ],
+  "hashType": "sha256"
+}
