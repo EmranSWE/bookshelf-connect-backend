@@ -20,7 +20,7 @@ const globalErrorHandler: ErrorRequestHandler = (
   next: NextFunction
 ) => {
   config.env === 'development'
-    ? console.log('Error logger ', error)
+    ? console.log('Error found before save date,See logger--->')
     : errorLogger.error('Global error', error);
   let statusCode = 400;
   let message = 'Something went wrong!';

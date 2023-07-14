@@ -7,7 +7,7 @@ import { errorLogger, logger } from './shared/logger';
 async function bootstrap() {
   try {
     await mongoose.connect(config.database_url as string);
-    logger.info('💻💻💻💻Database connected successfully | YAY');
+    logger.info('💻Database connected successfully ');
 
     app.listen(config.port, () => {
       console.log(`Example app listening on port ${config.port}`);

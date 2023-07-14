@@ -18,3 +18,13 @@
   level: 'info',
   timestamp: '2023-07-14T19:48:04.209Z'
 }
+{
+  message: '💻💻💻💻Database connected successfully | YAY',
+  level: 'info',
+  timestamp: '2023-07-14T19:48:20.787Z'
+}
+{
+  message: '💻💻💻💻Database connected successfully | YAY',
+  level: 'info',
+  timestamp: '2023-07-14T19:58:51.602Z'
+}
