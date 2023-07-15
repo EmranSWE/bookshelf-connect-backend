@@ -24,8 +24,6 @@ const getAllBooks: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const filters = pick(req.query, bookFilterableFields);
     const paginationOptions = pick(req.query, paginationFields);
-    console.log('Filters', filters);
-    console.log('Pagination', paginationOptions);
     const result = await BookService.getAllBooks(paginationOptions, filters);
     sendResponse(res, {
       statusCode: httpStatus.OK,

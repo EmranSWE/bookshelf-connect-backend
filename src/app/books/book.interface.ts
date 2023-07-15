@@ -7,6 +7,6 @@ export type IBook = {
   pub_date: Date;
 };
 
-export const bookFilterableFields = ['title', 'author', 'genre'];
+export const bookFilterableFields = ['title', 'author', 'genre', 'searchTerm'];
 export const bookSearchableFields = ['title', 'author', 'genre'];
 export type BookModel = Model<IBook, Record<string, unknown>>;

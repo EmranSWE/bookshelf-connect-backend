@@ -2,6 +2,8 @@ import { SortOrder } from 'mongoose';
 import { paginationHelpers } from '../../helpers/paginationHelpers';
 import { IBook, bookSearchableFields } from './book.interface';
 import { Book } from './book.model';
+import { IBookFilters, IPaginationOptions } from '../../interface/pagination';
+import { IGenericResponse } from '../../interface/common';
 
 const createBook = async (BookData: IBook): Promise<IBook | null> => {
   const { title, author, genre, pub_date } = BookData;
@@ -11,9 +13,17 @@ const createBook = async (BookData: IBook): Promise<IBook | null> => {
   return newBook;
 };
 
-const getAllBooks = async (paginationOptions, filters) => {
+const getAllBooks = async (
+  paginationOptions: IPaginationOptions,
+  filters: IBookFilters
+): Promise<IGenericResponse<IBook[]>> => {
   const { searchTerm, ...filtersData } = filters;
+
+  const { page, limit, skip, sortBy, sortOrder } =
+    paginationHelpers.calculatePagination(paginationOptions);
+
   const andConditions = [];
+
   if (searchTerm) {
     andConditions.push({
       $or: bookSearchableFields.map(field => ({
@@ -32,8 +42,7 @@ const getAllBooks = async (paginationOptions, filters) => {
       })),
     });
   }
-  const { page, limit, skip, sortBy, sortOrder } =
-    paginationHelpers.calculatePagination(paginationOptions);
+
   const sortConditions: { [key: string]: SortOrder } = {};
 
   if (sortBy && sortOrder) {

@@ -203,3 +203,8 @@
   level: 'info',
   timestamp: '2023-07-14T20:55:20.022Z'
 }
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-14T20:56:17.297Z'
+}
