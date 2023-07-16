@@ -4,12 +4,11 @@ import config from '../../config';
 import { IGenericErrorMessage } from '../../interface/error';
 import handleValidationError from '../../errors/handleValidation';
 import ApiError from '../../errors/apiErrors';
-import { errorLogger } from '../../shared/logger';
 import handleZodError from '../../errors/handledZodError';
 import handleCastError from '../../errors/handledCastError';
 
 process.on('uncaughtException', error => {
-  errorLogger.error(error);
+  console.log(error);
   process.exit(1);
 });
 
@@ -21,7 +20,7 @@ const globalErrorHandler: ErrorRequestHandler = (
 ) => {
   config.env === 'development'
     ? console.log('Error found before save date,See logger--->')
-    : errorLogger.error('Global error', error);
+    : console.log('Global error', error);
   let statusCode = 400;
   let message = 'Something went wrong!';
   let errorMessage: IGenericErrorMessage[] = [];

@@ -10,6 +10,7 @@ import { paginationFields } from '../constant/pagination';
 const createBook: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const book = req.body;
+    console.log('Im inside the create book', book);
     const result = await BookService.createBook(book);
     sendResponse(res, {
       statusCode: httpStatus.OK,
@@ -36,6 +37,7 @@ const getAllBooks: RequestHandler = catchAsync(
 const getSingleBook: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const id = req.params.id;
+    console.log(id);
     const result = await BookService.getSingleBook(id);
     sendResponse(res, {
       statusCode: httpStatus.OK,
@@ -45,9 +47,23 @@ const getSingleBook: RequestHandler = catchAsync(
     });
   }
 );
-
+const updateSingleBook: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const book = req.body;
+    console.log('Im inside the create book update', book);
+    const result = await BookService.updateSingleBook(book, id);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Book created successfully',
+      data: result,
+    });
+  }
+);
 export const BookController = {
   createBook,
   getAllBooks,
   getSingleBook,
+  updateSingleBook,
 };

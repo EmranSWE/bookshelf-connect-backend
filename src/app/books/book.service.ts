@@ -73,8 +73,18 @@ const getSingleBook = async (id: string) => {
   return allBook;
 };
 
+const updateSingleBook = async (
+  BookData: IBook,
+  id: string
+): Promise<IBook | null> => {
+  const newBook = Book.findByIdAndUpdate({ _id: id }, BookData, {
+    new: true,
+  });
+  return newBook;
+};
 export const BookService = {
   createBook,
   getAllBooks,
   getSingleBook,
+  updateSingleBook,
 };

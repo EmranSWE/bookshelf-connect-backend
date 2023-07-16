@@ -1,0 +1,25 @@
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-15T18:03:51.324Z'
+}
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-15T18:18:26.450Z'
+}
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-15T18:19:15.846Z'
+}
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-15T18:19:53.838Z'
+}
+{
+  message: '💻Database connected successfully ',
+  level: 'info',
+  timestamp: '2023-07-15T18:21:00.461Z'
+}

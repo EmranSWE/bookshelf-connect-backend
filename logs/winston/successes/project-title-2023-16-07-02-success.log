@@ -1,35 +1,30 @@
 {
   message: '💻Database connected successfully ',
   level: 'info',
-  timestamp: '2023-07-15T13:22:13.022Z'
+  timestamp: '2023-07-15T20:00:04.067Z'
 }
 {
   message: '💻Database connected successfully ',
   level: 'info',
-  timestamp: '2023-07-15T13:32:15.767Z'
+  timestamp: '2023-07-15T20:00:47.047Z'
 }
 {
   message: '💻Database connected successfully ',
   level: 'info',
-  timestamp: '2023-07-15T13:33:00.339Z'
+  timestamp: '2023-07-15T20:00:54.303Z'
 }
 {
   message: '💻Database connected successfully ',
   level: 'info',
-  timestamp: '2023-07-15T13:33:09.747Z'
+  timestamp: '2023-07-15T20:03:45.060Z'
 }
 {
   message: '💻Database connected successfully ',
   level: 'info',
-  timestamp: '2023-07-15T13:35:10.801Z'
+  timestamp: '2023-07-15T20:32:54.793Z'
 }
 {
   message: '💻Database connected successfully ',
   level: 'info',
-  timestamp: '2023-07-15T13:42:37.294Z'
-}
-{
-  message: '💻Database connected successfully ',
-  level: 'info',
-  timestamp: '2023-07-15T13:46:51.216Z'
+  timestamp: '2023-07-15T20:33:57.602Z'
 }
