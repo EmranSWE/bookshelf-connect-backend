@@ -1,9 +1,10 @@
-import { SortOrder } from 'mongoose';
+import { SortOrder, UpdateResult } from 'mongoose';
 import { paginationHelpers } from '../../helpers/paginationHelpers';
 import { IBook, bookSearchableFields } from './book.interface';
 import { Book } from './book.model';
 import { IBookFilters, IPaginationOptions } from '../../interface/pagination';
 import { IGenericResponse } from '../../interface/common';
+import { ObjectId } from 'mongodb';
 
 const createBook = async (BookData: IBook): Promise<IBook | null> => {
   const { title, author, genre, pub_date } = BookData;
@@ -73,6 +74,17 @@ const getSingleBook = async (id: string) => {
   return allBook;
 };
 
+const createReview = async (
+  reviewData: IBook[],
+  id: string
+): UpdateResult<Document> => {
+  const newBook = Book.updateOne(
+    { _id: new ObjectId(id) },
+    { $push: { reviews: reviewData } },
+    { new: true }
+  );
+  return newBook;
+};
 const updateSingleBook = async (
   BookData: IBook,
   id: string
@@ -82,9 +94,22 @@ const updateSingleBook = async (
   });
   return newBook;
 };
+
+const getReview = async (id: string) => {
+  const allReview = await Book.findOne({ _id: id }, { _id: 0, reviews: 1 });
+  return allReview;
+};
+
+const deleteABook = async (id: string) => {
+  const deletedBook = await Book.deleteOne({ _id: id });
+  return deletedBook;
+};
 export const BookService = {
   createBook,
   getAllBooks,
   getSingleBook,
   updateSingleBook,
+  getReview,
+  createReview,
+  deleteABook,
 };

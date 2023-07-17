@@ -37,7 +37,7 @@ const getAllBooks: RequestHandler = catchAsync(
 const getSingleBook: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const id = req.params.id;
-    console.log(id);
+
     const result = await BookService.getSingleBook(id);
     sendResponse(res, {
       statusCode: httpStatus.OK,
@@ -51,7 +51,6 @@ const updateSingleBook: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const id = req.params.id;
     const book = req.body;
-    console.log('Im inside the create book update', book);
     const result = await BookService.updateSingleBook(book, id);
     sendResponse(res, {
       statusCode: httpStatus.OK,
@@ -61,9 +60,52 @@ const updateSingleBook: RequestHandler = catchAsync(
     });
   }
 );
+
+const createReview: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const book = req.body.review;
+    const result = await BookService.createReview(book, id);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Book created successfully',
+      data: result,
+    });
+  }
+);
+
+const getReview: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const result = await BookService.getReview(id);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Books fetch successfully',
+      data: result,
+    });
+  }
+);
+
+const deleteABook: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const result = await BookService.deleteABook(id);
+    sendResponse(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Books Deleted successfully',
+      data: result,
+    });
+  }
+);
 export const BookController = {
   createBook,
   getAllBooks,
   getSingleBook,
   updateSingleBook,
+  createReview,
+  deleteABook,
+  getReview,
 };
