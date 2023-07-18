@@ -17,8 +17,12 @@ const bookSchema = new mongoose_1.Schema({
         required: true,
     },
     pub_date: {
-        type: Date,
+        type: String,
         required: true,
+    },
+    reviews: {
+        type: [String],
+        required: false,
     },
 }, {
     timestamps: true,

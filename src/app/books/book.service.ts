@@ -1,4 +1,4 @@
-import { SortOrder, UpdateResult } from 'mongoose';
+import { SortOrder } from 'mongoose';
 import { paginationHelpers } from '../../helpers/paginationHelpers';
 import { IBook, bookSearchableFields } from './book.interface';
 import { Book } from './book.model';
@@ -74,10 +74,7 @@ const getSingleBook = async (id: string) => {
   return allBook;
 };
 
-const createReview = async (
-  reviewData: IBook[],
-  id: string
-): UpdateResult<Document> => {
+const createReview = async (reviewData: IBook[], id: string) => {
   const newBook = Book.updateOne(
     { _id: new ObjectId(id) },
     { $push: { reviews: reviewData } },

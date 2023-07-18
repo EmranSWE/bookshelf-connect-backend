@@ -44,7 +44,6 @@ const getAllBooks = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, vo
 }));
 const getSingleBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;
-    console.log(id);
     const result = yield book_service_1.BookService.getSingleBook(id);
     (0, sendResponse_1.default)(res, {
         statusCode: http_status_1.default.OK,
@@ -56,7 +55,6 @@ const getSingleBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, 
 const updateSingleBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const id = req.params.id;
     const book = req.body;
-    console.log('Im inside the create book update', book);
     const result = yield book_service_1.BookService.updateSingleBook(book, id);
     (0, sendResponse_1.default)(res, {
         statusCode: http_status_1.default.OK,
@@ -65,9 +63,43 @@ const updateSingleBook = (0, catchAsync_1.default)((req, res) => __awaiter(void 
         data: result,
     });
 }));
+const createReview = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const id = req.params.id;
+    const book = req.body.review;
+    const result = yield book_service_1.BookService.createReview(book, id);
+    (0, sendResponse_1.default)(res, {
+        statusCode: http_status_1.default.OK,
+        success: true,
+        message: 'Book created successfully',
+        data: result,
+    });
+}));
+const getReview = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const id = req.params.id;
+    const result = yield book_service_1.BookService.getReview(id);
+    (0, sendResponse_1.default)(res, {
+        statusCode: http_status_1.default.OK,
+        success: true,
+        message: 'Books fetch successfully',
+        data: result,
+    });
+}));
+const deleteABook = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const id = req.params.id;
+    const result = yield book_service_1.BookService.deleteABook(id);
+    (0, sendResponse_1.default)(res, {
+        statusCode: http_status_1.default.OK,
+        success: true,
+        message: 'Books Deleted successfully',
+        data: result,
+    });
+}));
 exports.BookController = {
     createBook,
     getAllBooks,
     getSingleBook,
     updateSingleBook,
+    createReview,
+    deleteABook,
+    getReview,
 };
